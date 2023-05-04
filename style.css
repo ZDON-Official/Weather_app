@@ -101,8 +101,8 @@ body{
 /* code for info box */
 
 .info-box{
-    height: 70%;
-    width: 80%;
+    height: 80%;
+    width: 100%;
 
     /* delete these later most likely */
     background-color: #06283D;
