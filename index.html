@@ -5,10 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="script.js" defer></script>
+        <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="assets/css/solid.css">
+        <link rel="stylesheet" href="assets/css/brands.css">
         <link rel="stylesheet" href="style.css">
 
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
-        <script src="https://kit.fontawesome.com/dade9aa218.js" crossorigin="anonymous"></script>
+        <!-- <script src="https://kit.fontawesome.com/dade9aa218.js" crossorigin="anonymous"></script> -->
 
         <title>Weather App</title>
     </head>
@@ -21,11 +24,21 @@
                 <button class="fa-solid fa-magnifying-glass" id="search"> </button>
             </div>
 
+            <div class="error">
+                Error placeholder
+            </div>
+
 
             <div class="info-box">
                 <div class="temp-info">
                     <p class="temp"> Temp </p>
-                    <div class="temp-img"> </div>
+                    <div class="temp-img">
+                        <i class="fa-solid fa-sun" id="sun"></i>
+                        <i class="fa-solid fa-cloud-showers-heavy" id="rain"></i>
+                        <i class="fa-solid fa-snowflake" id="snow"></i>
+                        <i class="fa-solid fa-cloud" id="cloud"></i>
+                        <i class="fa-solid fa-smog" id="haze"></i>
+                    </div>
                     <p class="temp-desc"> description </p>
                 </div>
 

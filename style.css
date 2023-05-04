@@ -95,13 +95,19 @@ body{
     font-size: 24px;
 }
 
+/* code for error */
 
+.error{
+    display: none;
+    margin: 20px;
+    font-size: 24px;
+}
 
 
 /* code for info box */
 
 .info-box{
-    /* height: 0px; */
+    height: 0px;
     width: 100%;
 
     /* delete these later most likely */
@@ -111,18 +117,21 @@ body{
     color: white;
 
 
+
     /* padding: 20px; */
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 
-    transition: 0.6s ease;
+    transition: 0.6s ease-out;
 }
 
 
 .temp-info{
+    position: relative;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -136,22 +145,58 @@ body{
 
 .temp-img{
     color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* border: 2px solid gold; */
 }
 
 .temp-img i{
-    height: 50px;
-    width: 50px;
-    font-size: 28px;
+    display: none;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 60px;
+    color: white;
+    font-size: 34px;
+
 }
 
+#sun{
+    display: none;
+}
+
+#rain{
+    display: none;
+}
+
+#snow{
+    display: none;
+}
+
+#cloud{
+    display: none;
+}
+
+#haze{
+    display: none;
+}
+
+
+
+
 .temp-desc{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 
 
 .weather-info{
+    position: relative;
     padding: 20px;
     width: 100%;
     display: flex;
