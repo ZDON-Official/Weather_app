@@ -39,31 +39,33 @@ search.addEventListener('click', () => {
                 const wind = document.querySelector('.wind span')
                 const img = document.querySelector('.temp-img')
 
+                console.log(json.weather[0].main)
 
                 switch (json.weather[0].main) {
                     case 'Clear':
-                        // image.src = 'images/clear.png';
-                        // <i class="fa-solid fa-sun"></i>
+                        img.innerHTML = '<i class="fa-solid fa-sun"></i>'
                         break;
 
                     case 'Rain':
-                        // image.src = 'images/rain.png';
+                        img.innerHTML = '<i class="fa-solid fa-cloud-showers-heavy"></i>'
                         break;
 
                     case 'Snow':
-                        // image.src = 'images/snow.png';
+                        img.innerHTML = '<i class="fa-solid fa-snowflake"></i>'
                         break;
 
                     case 'Clouds':
-                        image.src = 'images/cloud.png';
+                        img.innerHTML = `<i class="fa-solid fa-clouds"></i>`
+                        console.log('in clear')
+                        console.log(img)
                         break;
 
                     case 'Haze':
-                        image.src = 'images/mist.png';
+                        img.innerHTML = '<i class="fa-solid fa-sun-haze"></i>'
                         break;
 
                     default:
-                        image.src = '';
+                        img.innerHTML = '<i class="fa-solid fa-sun-haze"></i>';
                 }
 
 

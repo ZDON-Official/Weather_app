@@ -134,9 +134,21 @@ body{
     font-size: 4rem;
 }
 
+.temp-img{
+    color: white;
+    /* border: 2px solid gold; */
+}
+
+.temp-img i{
+    height: 50px;
+    width: 50px;
+    font-size: 28px;
+}
+
 .temp-desc{
     font-size: 2rem;
 }
+
 
 
 .weather-info{
