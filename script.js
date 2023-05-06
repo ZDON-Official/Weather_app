@@ -32,6 +32,8 @@ search.addEventListener('click', () => {
                     error.style.display = 'block'
                     error.innerHTML = 'Invalid location'
                     return
+                } else{
+                    error.style.display = 'none'
                 }
 
                 const temp_info = document.querySelector('.temp')
