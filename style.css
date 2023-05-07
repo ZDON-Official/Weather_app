@@ -109,6 +109,7 @@ body{
 .info-box{
     height: 0px;
     width: 100%;
+    margin-top: 0.5em;
 
     /* delete these later most likely */
     background-color: #06283D;
