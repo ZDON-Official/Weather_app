@@ -15,6 +15,7 @@ search.addEventListener("click", () => {
 
     weather_info.style.height = "0px";
   } else if (city) {
+    //TODO should also work for city, state - seattle, washington
     //TODO return the weather info
 
     fetch(
