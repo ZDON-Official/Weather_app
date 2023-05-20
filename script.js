@@ -6,20 +6,36 @@ const error = document.querySelector(".error");
 
 search.addEventListener("click", () => {
   const APIkey = "09beed1c29719955be81f477691140e2";
-  const city = document.querySelector(".search-input").value;
+  const input = document.querySelector(".search-input").value;
 
   // sun.style.display = 'flex'
 
-  if (!city) {
+  if (!input) {
     //TODO code here will return a 'not found' error
 
     weather_info.style.height = "0px";
-  } else if (city) {
+  } else if (input) {
     //TODO should also work for city, state - seattle, washington
-    //TODO return the weather info
+
+    var city = input
+    var state = '';
+    var api
+
+
+    if(input.includes(',') === true){
+      city = input.substring(0, input.indexOf(','))
+      state = input.substring(input.indexOf(',')+1).trim()
+
+      api = `https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&appid=${APIkey}&units=imperial`
+    } else{
+      api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}&units=imperial`
+    }
+
+    console.log(city)
+    console.log(state)
 
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}&units=imperial`
+      api
     )
       .then((Response) => Response.json())
       .then((json) => {
